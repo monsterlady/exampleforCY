@@ -23,7 +23,8 @@ public class XRK {
     public void knockdown(String str) {
         if (isFull(str)) {
             int counter = 0;
-            int bollToknock = (int) (Math.random() * 10 - score);
+            int xrk = 10 - score;
+            int bollToknock = (int) (Math.random() * xrk);
             if(bollToknock < 0){
                 bollToknock = 0;
             }
