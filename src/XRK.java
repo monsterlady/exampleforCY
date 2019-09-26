@@ -1,11 +1,14 @@
 public class XRK {
-    private static String image = "O  O  O  O \n" +
-            "  O  O  O\n" +
-            "   O   O\n" +
-            "     O";
-    private static int score = 0;
+    private  String image = "O   O   O   O \n" +
+            "  O   O   O\n" +
+            "    O   O\n" +
+            "      O";
+    private int score = 0;
 
-    public static void main(String[] args) {new XRK().run();}
+    public static void main(String[] args) {
+        XRK xrk = new XRK();
+        xrk.run();
+    }
 
     public void run(){
         System.out.println("Welcome to Random Bowling!");
@@ -23,7 +26,8 @@ public class XRK {
     public void knockdown(String str) {
         if (isFull(str)) {
             int counter = 0;
-            int bollToknock = (int) (Math.random() * 10 - score);
+            int xrk = 10 - score;
+            int bollToknock = (int) (Math.random() * xrk);
             if(bollToknock < 0){
                 bollToknock = 0;
             }
